@@ -4,13 +4,23 @@
  */
 package com.rattencorp.demofortest.simpletests;
 
-import com.rattencorp.demofortest.simpletests.DemoClass;
 import org.junit.jupiter.api.Test;
 import org.assertj.core.api.Assertions;
 
 class DemoClassTest {
+    
+    
+    
     /**
      * tests {@link DemoClass#addFive(int)}
+     * 
+     * <pre>
+     * demonstrates:
+     * <ul>
+     *  <li>assertion via {@link org.junit.jupiter.api.Assertions}</li>
+     *  <li>basic test structure</li>
+     * </ul>
+     * </pre>
      */
     @Test
     void addFive_shouldReturn7_whenGiven5() {
@@ -22,12 +32,24 @@ class DemoClassTest {
         final int result = testee.addFive(input);
         
         //THEN
-        org.junit.jupiter.api.Assertions.assertEquals(7, result, "should have returnde 7");
+        org.junit.jupiter.api.
+                Assertions.assertEquals(            
+                        7,                                          //expected value
+                        result,                                     //actual result of the method call
+                        "should have returned 7, because 2+5=7");   //message in case the test failed
     }
 
-
+    
     /**
-     * tests {@link DemoClass#addFive(int)}
+     * test for {@link DemoClass#addFive(int)}
+     * 
+     * <pre>
+     * demonstrates:
+     * <ul>
+     *  <li>basic test structure</li>
+     *  <li>usage of {@link org.assertj.core.api.Assertions}</li>
+     * </ul>
+     * </pre>
      */
     @Test
     void addFive_shouldReturn0_whenGivenMinus5() {
@@ -39,6 +61,7 @@ class DemoClassTest {
         final int result = testee.addFive(input);
         
         //THEN
-        Assertions.assertThat(result).isEqualTo(0);
+        Assertions.assertThat(result)           
+                .isEqualTo(0);
     }
 }

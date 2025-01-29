@@ -13,7 +13,17 @@ import org.junit.jupiter.api.Test;
  */
 class ExceptionsDemoTest {
     
-
+    /**
+     * tests {@link ExceptionsDemo#processWithIoException(java.lang.String) }
+     * 
+     * <pre>
+     * demonstrates:
+     * <ul>
+     *  <li>asserting exceptions via {@link org.junit.jupiter.api.Assertions}</li>
+     *  <li>verification of properties of the thrown exception </li>
+     * </ul>
+     * </pre>
+     */
     @Test
     void testProcessWithIoException_shouldThrowIOEx_whenReceivingInvalidFilename(){
         //GIVEN
@@ -32,6 +42,17 @@ class ExceptionsDemoTest {
                         "Error message should contain filename");
     }
     
+    
+    /**
+     * tests {@link ExceptionsDemo#processWithIoException(java.lang.String)}
+     * 
+     * <pre>
+     * demonstrates:
+     * <ul>
+     *  <li>assertion of exceptions via {@link org.junit.jupiter.api.Assertions}</li>
+     * </ul>
+     * </pre>
+     */
     @Test
     void assertJ_testProcessWithIoException_shouldThrowIOEx_whenReceivingInvalidFilename(){
         //GIVEN
