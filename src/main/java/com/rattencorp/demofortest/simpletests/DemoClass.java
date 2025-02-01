@@ -18,6 +18,9 @@ public class DemoClass {
     public int addFive(int i){
         return i+5;
     }
-    
+
+    String eliminateCharFromStr(String str, String noDesirable){
+        return str.replaceAll(noDesirable, "");
+    }
     
 }
